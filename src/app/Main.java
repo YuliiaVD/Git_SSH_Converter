@@ -8,13 +8,19 @@ public class Main {
         System.out.println("My Metric Conversions app. ");
 
         double mile = 10;
+        double km = 15;
         double kilometre = konvMlsToKm(mile);
+        double miles = konvKmtoMiles(km);
 
-        System.out.println("Result is " + kilometre + " kilometre.");
+        System.out.println("Result is: " + kilometre + " kilometre and " + miles + " mile. ");
 
     }
 
     private static double konvMlsToKm(double mile) {
         return mile * KONV_D;
+    }
+
+    private static double konvKmtoMiles(double km) {
+        return km / KONV_D;
     }
 }
